@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketplace - AgriConnect</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="header-container"></div>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Live Marketplace</h1>
+            <p>Browse fresh produce directly from verified farmers. Fair prices, quality guaranteed.</p>
+        </div>
+    </section>
+
+    <section class="marketplace-page">
+        <div class="container">
+            <div class="marketplace-controls">
+                <div class="search-bar">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <circle cx="9" cy="9" r="6" stroke="#6B7280" stroke-width="2"/>
+                        <path d="M13 13L17 17" stroke="#6B7280" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <input type="text" id="searchInput" placeholder="Search for products...">
+                </div>
+                <div class="filter-group">
+                    <label>Sort by:</label>
+                    <select id="sortSelect">
+                        <option value="name">Name</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="location">Location</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="marketplace-filters">
+                <button class="filter-btn active" data-filter="all">All Products</button>
+                <button class="filter-btn" data-filter="vegetables">Vegetables</button>
+                <button class="filter-btn" data-filter="fruits">Fruits</button>
+                <button class="filter-btn" data-filter="grains">Grains</button>
+                <button class="filter-btn" data-filter="dairy">Dairy</button>
+            </div>
+
+            <div class="marketplace-grid" id="marketplaceGrid">
+            </div>
+
+            <div class="marketplace-cta">
+                <h3>Can't find what you're looking for?</h3>
+                <p>Post a buying request and let farmers come to you</p>
+                <button class="btn-primary btn-large">Post Request</button>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
